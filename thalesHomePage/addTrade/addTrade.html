@@ -3,7 +3,7 @@
 <head>
 	<title>Thales Trading</title>
 	<!--Bootstrap-->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<div class= "container-fluid">
@@ -18,28 +18,279 @@
 						<li><a href="#">Katy Kneiser Home</a></li>
 						<li><a href="#">Thales Main</a></li>
 						<li><a href="#">Find Trade</a></li>
-						<!--<li><a href="#">Nav4</a></li>
-						<li class="subscribe"><a href="#">Subscribe via. RSS</a></li>-->
+						<li><a href="#">Max Open Interest Changers</a></li>
+						<!--<li class="subscribe"><a href="#">Subscribe via. RSS</a></li>-->
 					</ul>
 				</nav>
 				<aside>
 				<!-- Sidebar -->
+					<p>The Sidebar Stuff</p>
 				</aside>
 			</div>
-			<div class="span10">
-				<section id="intro">
+			<div class="span4 offset1">
+				<section id="addTradesform">
 				<!-- Introduction -->
 					<header>  
-						<h2>Add New Trade</h2>  
+						<h2>Eurodollar Large Trades</h2>  
 					</header>  
-					<p>Add a new trade to the Large Trade Log.</p>  
+					<form class="form-horizontal">
+						<fieldset>
+							<legend>Add a Trade</legend>
+							<div class="control-group">
+								<label class="control-label" for="tradeSummaryAdd">Trade Summary</label>
+								<div class="controls">
+									<input type="text" class="span10" id="tradeSummaryAdd">
+									<span class="help-inline">Quick Trade Description</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="buySellAdd">Buy/Sell(total)</label>
+								<div class="controls">
+									<select class="span4" id="buySellAdd">
+										<option></option>
+										<option>Buy</option>
+										<option>Sell</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="totalQtyAdd">Total Qty</label>
+								<div class="controls">
+									<input type="text" class="span2" id="totalQtyAdd">
+									<span class="help-inline">in K</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="totalPriceAdd">Total Price</label>
+								<div class="controls">
+									<input type="text" class="span2" id="totalPriceAdd">
+									<span class="help-inline"></span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="houseAdd">House</label>
+								<div class="controls">
+									<input type="text" class="span3" id="houseAdd">
+									<span class="help-inline">Three Digit House</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="openCloseAdd">Open/Close</label>
+								<div class="controls">
+									<select class="span5" id="openCloseAdd">
+										<option></option>
+										<option>Open</option>
+										<option>Close</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="typicallyCloseAdd"> Typically Closer?</label>
+								<div class="controls">
+									<select class="span4" id="typicallyCloseAdd">
+										<option></option>
+										<option>Yes</option>
+										<option>No</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="callPutAdd">Option Type</label>
+								<div class="controls">
+									<select class="span5" id="callPutAll">
+										<option></option>
+										<option>Call</option>
+										<option>Put</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="productAdd">Product</label>
+								<div class="controls">
+									<select class="span5" id="productAdd">
+										<option></option>
+										<option>Front</option>
+										<option>Red</option>
+										<option>Long Green</option>
+										<option>Short</option>
+										<option>Green</option>
+										<option>Blue</option>
+										<option>Gold</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="monthAdd">Month</label>
+								<div class="controls">
+									<select class="span5" id="monthAdd">
+										<option></option>
+										<option>Jan</option>
+										<option>Feb</option>
+										<option>Mar</option>
+										<option>Apr</option>
+										<option>May</option>
+										<option>Jun</option>
+										<option>Jul</option>
+										<option>Aug</option>
+										<option>Sep</option>
+										<option>Oct</option>
+										<option>Nov</option>
+										<option>Dec</option>	
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="yearAdd">Year</label>
+								<div class="controls">
+									<input type="text" class="span2" id="yearAdd">
+									<span class="help-inline">Two Digit Year</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="strikeAdd">Strike</label>
+								<div class="controls">
+									<input type="text" class="span3" id="strikeAdd">
+									<span class="help-inline">The Four Digit Strike</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="spreadInput">Spread</label>
+								<div class="controls">
+									<select class="span5" id="spreadInput">
+										<option></option>
+										<option>Outright</option>
+										<option>C/P Spread</option>
+										<option>Fly</option>
+										<option>Condor</option>
+										<option>Package</option>
+										<option>Straddle</option>
+										<option>Strangle</option>
+										<option>Squash</option>
+										<option>C/P Tree</option>
+										<option>Ladder</option>
+										<option>Iron Fly</option>
+										<option>Iron Condpr</option>
+										<option>Diagonal</option>
+										<option>Ratio</option>
+										<option>Calendar</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="legBuySellAdd">Leg Buy/Sell</label>
+								<div class="controls">
+									<select class="span5" id="legBuySellAdd">
+										<option></option>
+										<option>Buy</option>
+										<option>Sell</option>
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="legPriceAdd">Leg Price</label>
+								<div class="controls">
+									<input type="text" class="span3" id="legPriceAdd">
+									<span class="help-inline">Leave Blank for "n/a"</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="legQtyAdd">Leg Quantity</label>
+								<div class="controls">
+									<input type="text" class="span3" id="legQtyAdd">
+									<span class="help-inline">in K</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="deltaAdd">Delta</label>
+								<div class="controls">
+									<input type="text" class="span3" id="deltaAdd">
+									<span class="help-inline">between -1.0 and 1.0</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="futuresMonthAdd">Futures Month</label>
+								<div class="controls">
+									<select class="span5" id="futuresMonthAdd">
+										<option></option>
+										<option>Jan</option>
+										<option>Feb</option>
+										<option>Mar</option>
+										<option>Apr</option>
+										<option>May</option>
+										<option>Jun</option>
+										<option>Jul</option>
+										<option>Aug</option>
+										<option>Sep</option>
+										<option>Oct</option>
+										<option>Nov</option>
+										<option>Dec</option>	
+									</select>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="futYearAdd">Futures Year</label>
+								<div class="controls">
+									<input type="text" class="span2" id="futYearAdd">
+									<span class="help-inline">Two Digit Year</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="futPriceAdd">Futures Price</label>
+								<div class="controls">
+									<input type="text" class="span4" id="futYearAdd">
+									<span class="help-inline"></span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="blockQtyAdd">Block Qty</label>
+								<div class="controls">
+									<input type="text" class="span2" id="blockQtyAdd">
+									<span class="help-inline">in K</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="pitQtyAdd">Pit Qty</label>
+								<div class="controls">
+									<input type="text" class="span2" id="pitQtyAdd">
+									<span class="help-inline">in K</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="screenQtyAdd">Screen Qty</label>
+								<div class="controls">
+									<input type="text" class="span2" id="screenQtyAdd">
+									<span class="help-inline">in K</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="houseInput">House</label>
+								<div class="controls">
+									<input type="text" class="span3" id="houseInput">
+									<span class="help-inline">Three Digit House</span>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="sourceAdd">Source</label>
+								<div class="controls">
+									<select class="span5" id="sourceAdd">
+										<option></option>
+										<option>Pit</option>
+										<option>Tiffany</option>
+										<option>Max</option>
+										<option>Henry Ing</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-actions">
+								<button class="btn btn-primary" type="submit">Add</button>
+								<button class="btn">Add Another Leg</button>
+							</div>
+						</fieldset>
+					</form>
 				</section>
 				<section id="ED Trades">
 					<!-- EuroDollar Trades Section -->
-					<div class="btn-group">
-						<button class="btn">Add Trade</button>
-						<button class="btn">Find Trades</button>
-					</div>
+
 				</section>
 
 				<footer>
